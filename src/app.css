@@ -1,5 +1,7 @@
 @import 'tailwindcss';
+@plugin 'daisyui';
 
 @theme {
-    --font-display: "Funnel Display Variable"
+    --font-display: "Funnel Display Variable";
+    --font-sans: "Inter Variable";
 }

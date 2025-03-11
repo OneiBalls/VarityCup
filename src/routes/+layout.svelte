@@ -1,24 +1,25 @@
 <script lang="ts">
-	import '@fontsource-variable/funnel-display'
+	import '@fontsource-variable/funnel-display';
+	import '@fontsource-variable/inter';
 	import '../app.css';
 	let { children } = $props();
 </script>
 
-<header class="flex items-center justify-between m-4 ">
-	<p class="font-display font-bold text-2xl">Pretend this is banner rawr</p>
-    <nav>
-		<a href="/">Info</a>
-		<a href="/standings">Standings</a>
-		<a href="/games">Games</a>
-		<a href="/teams">Teams</a>
+<header class="navbar shadow-sm">
+	<p class="navbar-start font-display text-2xl font-bold">Onei's Variety Cup</p>
+	<nav class="navbar-end">
+		<ul class="menu menu-horizontal">
+			<li>
+				<a href="/">Home</a>
+			</li>
+			<li>
+				<a href="/event">Event</a>
+			</li>
+		</ul>
 	</nav>
 </header>
 
-<!-- Replace this with a UI theme -->
-<main class="border-black border-y-2">
-	{@render children()}
-</main>
+{@render children()}
 
-<footer>
-	aaaaaaaaaaaaaaaa
-</footer>
+<!-- TODO: use Dock for mobile -->
+<footer>aaaaaaaaaaaaaaaa</footer>
