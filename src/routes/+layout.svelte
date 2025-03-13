@@ -6,7 +6,9 @@
 </script>
 
 <header class="navbar shadow-sm">
-	<p class="navbar-start font-display text-2xl font-bold">Onei's Variety Cup</p>
+	<div class="navbar-start">
+		<img class="size-10" src="eventlogo.png" alt="Onei's Variety Cup">
+	</div>
 	<nav class="navbar-end">
 		<ul class="menu menu-horizontal">
 			<li>
@@ -20,6 +22,3 @@
 </header>
 
 {@render children()}
-
-<!-- TODO: use Dock for mobile -->
-<footer>aaaaaaaaaaaaaaaa</footer>
