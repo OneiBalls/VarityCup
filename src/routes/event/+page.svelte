@@ -1,8 +1,8 @@
 <script lang="ts">
     const teams = [{
         id: 1,
-        name: "A Great Team Name",
-        icon: "eventlogo.png",
+        name: "Girly Pops",
+        icon: "teams/FuschiaFrauds.png",
         iconAlt: "AGTN",
         score: 12345,
         members: [{
@@ -25,9 +25,9 @@
     },
     {
         id: 2,
-        teamName: "A Great Team Name",
-        teamIcon: "eventlogo.png",
-        teamIconAlt: "AGTN",
+        name: "A Great Team Name",
+        icon: "eventlogo.png",
+        iconAlt: "AGTN",
         score: 12345,
         members: [{
             name: "A Great Member",
