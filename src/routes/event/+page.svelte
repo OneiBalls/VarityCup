@@ -1,5 +1,57 @@
+<script lang="ts">
+    const teams = [{
+        id: 1,
+        teamName: "A Great Team Name",
+        teamIcon: "eventlogo.png",
+        teamIconAlt: "AGTN",
+        score: 12345,
+        members: [{
+            name: "A Great Member",
+            icon: "eventlogo.png",
+            channel: "https://example.com",
+        },{
+            name: "A Great Member",
+            icon: "eventlogo.png",
+            channel: "https://example.com",
+        },{
+            name: "A Great Member",
+            icon: "eventlogo.png",
+            channel: "https://example.com",
+        },{
+            name: "A Great Member",
+            icon: "eventlogo.png",
+            channel: "https://example.com",
+        }]
+    },
+    {
+        id: 2,
+        teamName: "A Great Team Name",
+        teamIcon: "eventlogo.png",
+        teamIconAlt: "AGTN",
+        score: 12345,
+        members: [{
+            name: "A Great Member",
+            icon: "eventlogo.png",
+            channel: "https://example.com",
+        },{
+            name: "A Great Member",
+            icon: "eventlogo.png",
+            channel: "https://example.com",
+        },{
+            name: "A Great Member",
+            icon: "eventlogo.png",
+            channel: "https://example.com",
+        },{
+            name: "A Great Member",
+            icon: "eventlogo.png",
+            channel: "https://example.com",
+        }]
+    }];
+
+</script>
+
 <main class="p-4">
-    <section class="grid gap-4 w-">
+    <section class="grid gap-4 max-w-100">
         <ul class="menu menu-horizontal bg-base-200 w-full">
             <li>
                 <details open>
@@ -15,50 +67,26 @@
             </li>
         </ul>
 
-        <table class="table bg-base-200 max-w-full">
-            <thead>
-                <tr>
-                    <th>Ranking</th>
-                    <th>Team</th>
-                    <th>Members</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>1</th>
-                    <th class="flex flex-row gap-4 items-center">
-                        <img class="size-10" alt="Icon" src="eventlogo.png">
-                        <div class="flex flex-col">
-                            <h1 class="font-display">A Great Team Name</h1>
-                            <p>12345</p>
-                        </div>
-                    </th>
-
-                    <!-- This should be from the DB-->
-                    <th class="flex flex-row items-center gap-4">
-                        <a target="_blank" href="https://example.com">
-                            <div class="bg-base-300 size-10 rounded-full">
-                                <img class="aspect-square" alt="Member name" src="eventlogo.png">
-                            </div>
-                        </a>
-                        <a target="_blank" href="https://example.com">
-                            <div class="bg-base-300 size-10 rounded-full">
-                                <img class="aspect-square" alt="Member name" src="eventlogo.png">
-                            </div>
-                        </a>
-                        <a target="_blank" href="https://example.com">
-                            <div class="bg-base-300 size-10 rounded-full">
-                                <img class="aspect-square" alt="Member name" src="eventlogo.png">
-                            </div>
-                        </a>
-                        <a target="_blank" href="https://example.com">
-                            <div class="bg-base-300 size-10 rounded-full">
-                                <img class="aspect-square" alt="Member name" src="eventlogo.png">
-                            </div>
-                        </a>
-                    </th>
-                </tr>
-            </tbody>
-        </table>
+        <ul class="rounded-sm flex flex-col gap-2">
+            {#each teams as team (team.id)}
+                <li class="bg-base-200 flex flex-row items-center gap-2 py-1">
+                    <div class="w-10 text-center">
+                        <h6>{team.id}</h6>
+                    </div>
+                    <img class="size-6 sm:size-8" src={team.teamIcon} alt={team.teamIconAlt}>
+                    <div class="w-34">
+                        <h2 class="font-display text-sm">{team.teamName}</h2>
+                        <p>{team.score}</p>
+                    </div>
+                    <div class="flex gap-2 pr-2 flex-1">
+                        {#each team.members as member}
+                            <a target="_blank" href={member.channel}>
+                                <img class="size-6 sm:size-8" src={member.icon} alt={member.name}>
+                            </a>
+                        {/each}
+                    </div>
+                </li>
+            {/each}
+        </ul>
     </section>
 </main>
