@@ -1,9 +1,9 @@
 <script lang="ts">
     const teams = [{
         id: 1,
-        teamName: "A Great Team Name",
-        teamIcon: "eventlogo.png",
-        teamIconAlt: "AGTN",
+        name: "A Great Team Name",
+        icon: "eventlogo.png",
+        iconAlt: "AGTN",
         score: 12345,
         members: [{
             name: "A Great Member",
@@ -73,9 +73,9 @@
                     <div class="w-10 text-center">
                         <h6>{team.id}</h6>
                     </div>
-                    <img class="size-6 sm:size-8" src={team.teamIcon} alt={team.teamIconAlt}>
+                    <img class="size-6 sm:size-8" src={team.icon} alt={team.iconAlt}>
                     <div class="w-34">
-                        <h2 class="font-display text-sm">{team.teamName}</h2>
+                        <h2 class="font-display text-sm">{team.name}</h2>
                         <p>{team.score}</p>
                     </div>
                     <div class="flex gap-2 pr-2 flex-1">
