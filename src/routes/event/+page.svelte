@@ -2,7 +2,7 @@
     const teams = [{
         id: 1,
         name: "Girly Pops",
-        icon: "teams/FuschiaFrauds.png",
+        icon: "teams/GirlyPops.png",
         iconAlt: "AGTN",
         score: 12345,
         members: [{
@@ -50,7 +50,7 @@
 
 </script>
 
-<main class="p-4">
+<main class="p-4 flex flex-col items-center lg:justify-center lg:flex-row gap-4">
     <section class="grid gap-4 max-w-100">
         <ul class="menu menu-horizontal bg-base-200 w-full">
             <li>
@@ -88,5 +88,13 @@
                 </li>
             {/each}
         </ul>
+    </section>
+    <section class="bg-base-200 max-w-100 lg:w-100 p-2 rounded-sm flex flex-col gap-2">
+        <h2 class="font-display text-xl">Week 1: Marvel Rivals</h2>
+        <div class="grid grid-cols-3 justify-items-center" >
+            <p>1</p>
+            <p>vs</p>
+            <p>1</p>
+        </div>
     </section>
 </main>
